@@ -45,6 +45,7 @@ namespace AlibabaCloud.SDK.Ft20180713
                 {"cn-hangzhou-test-306", "ft.aliyuncs.com"},
                 {"cn-hongkong-finance-pop", "ft.aliyuncs.com"},
                 {"cn-huhehaote", "ft.aliyuncs.com"},
+                {"cn-huhehaote-nebula-1", "ft.aliyuncs.com"},
                 {"cn-qingdao", "ft.aliyuncs.com"},
                 {"cn-qingdao-nebula", "ft.aliyuncs.com"},
                 {"cn-shanghai-et15-b01", "ft.aliyuncs.com"},
@@ -57,7 +58,9 @@ namespace AlibabaCloud.SDK.Ft20180713
                 {"cn-shenzhen-st4-d01", "ft.aliyuncs.com"},
                 {"cn-shenzhen-su18-b01", "ft.aliyuncs.com"},
                 {"cn-wuhan", "ft.aliyuncs.com"},
+                {"cn-wulanchabu", "ft.aliyuncs.com"},
                 {"cn-yushanfang", "ft.aliyuncs.com"},
+                {"cn-zhangbei", "ft.aliyuncs.com"},
                 {"cn-zhangbei-na61-b01", "ft.aliyuncs.com"},
                 {"cn-zhangjiakou-na62-a01", "ft.aliyuncs.com"},
                 {"cn-zhengzhou-nebula-1", "ft.aliyuncs.com"},
@@ -73,15 +76,27 @@ namespace AlibabaCloud.SDK.Ft20180713
         }
 
 
-        public TestFlowStrategy01Response TestFlowStrategy01WithOptions(TestFlowStrategy01Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TestFlowStrategy01Response TestFlowStrategy01WithOptions(TestFlowStrategy01Request tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
+            TestFlowStrategy01ShrinkRequest request = new TestFlowStrategy01ShrinkRequest();
+            AlibabaCloud.Commons.Common.Convert(tmp, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.Names))
+            {
+                request.NamesShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.Names);
+            }
             return TeaModel.ToObject<TestFlowStrategy01Response>(DoRequest("TestFlowStrategy01", "HTTPS", "PUT", "2018-07-13", "AK", null, request.ToMap(), runtime));
         }
 
-        public async Task<TestFlowStrategy01Response> TestFlowStrategy01WithOptionsAsync(TestFlowStrategy01Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TestFlowStrategy01Response> TestFlowStrategy01WithOptionsAsync(TestFlowStrategy01Request tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
+            TestFlowStrategy01ShrinkRequest request = new TestFlowStrategy01ShrinkRequest();
+            AlibabaCloud.Commons.Common.Convert(tmp, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.Names))
+            {
+                request.NamesShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.Names);
+            }
             return TeaModel.ToObject<TestFlowStrategy01Response>(await DoRequestAsync("TestFlowStrategy01", "HTTPS", "PUT", "2018-07-13", "AK", null, request.ToMap(), runtime));
         }
 
@@ -97,15 +112,43 @@ namespace AlibabaCloud.SDK.Ft20180713
             return await TestFlowStrategy01WithOptionsAsync(request, runtime);
         }
 
-        public TestHttpApiResponse TestHttpApiWithOptions(TestHttpApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TestHttpApiResponse TestHttpApiWithOptions(TestHttpApiRequest tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
+            TestHttpApiShrinkRequest request = new TestHttpApiShrinkRequest();
+            AlibabaCloud.Commons.Common.Convert(tmp, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.StringValue))
+            {
+                request.StringValueShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.StringValue);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.DefaultValue))
+            {
+                request.DefaultValueShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.DefaultValue);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.OtherParam))
+            {
+                request.OtherParamShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.OtherParam);
+            }
             return TeaModel.ToObject<TestHttpApiResponse>(DoRequest("TestHttpApi", "HTTPS", "POST", "2018-07-13", "AK", null, request.ToMap(), runtime));
         }
 
-        public async Task<TestHttpApiResponse> TestHttpApiWithOptionsAsync(TestHttpApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TestHttpApiResponse> TestHttpApiWithOptionsAsync(TestHttpApiRequest tmp, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmp);
+            TestHttpApiShrinkRequest request = new TestHttpApiShrinkRequest();
+            AlibabaCloud.Commons.Common.Convert(tmp, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.StringValue))
+            {
+                request.StringValueShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.StringValue);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.DefaultValue))
+            {
+                request.DefaultValueShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.DefaultValue);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmp.OtherParam))
+            {
+                request.OtherParamShrink = AlibabaCloud.TeaUtil.Common.ToJSONString(tmp.OtherParam);
+            }
             return TeaModel.ToObject<TestHttpApiResponse>(await DoRequestAsync("TestHttpApi", "HTTPS", "POST", "2018-07-13", "AK", null, request.ToMap(), runtime));
         }
 
