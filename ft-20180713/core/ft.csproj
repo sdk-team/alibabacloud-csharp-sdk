@@ -39,5 +39,7 @@
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.1"/>
     <PackageReference Include="AlibabaCloud.SDK.Common" Version="0.2.5"/>
     <PackageReference Include="Tea" Version="1.0.4"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.0.6"/>
+    <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.0.3"/>
   </ItemGroup>
 </Project>
